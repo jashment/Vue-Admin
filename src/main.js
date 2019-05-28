@@ -17,10 +17,21 @@ import i18n from '@/i18n'
 import router from '@/router'
 import store from '@/store'
 
+// Google OAuth
+import GAuth from 'vue-google-oauth2'
+
 // Sync store with router
 sync(store, router)
 
 Vue.config.productionTip = false
+
+const gauthOption = {
+  clientId: 'CLIENT_ID.apps.googleusercontent.com',
+  scope: 'profile email',
+  prompt: 'select_account'
+}
+
+Vue.use(GAuth, gauthOption)
 
 /* eslint-disable no-new */
 new Vue({
