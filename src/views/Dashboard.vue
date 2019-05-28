@@ -6,6 +6,28 @@
   >
     <v-layout wrap>
       <v-flex
+        sm12
+        xs12
+        md12
+        lg12
+      >
+      <v-card>
+        <v-card-title class="justify-center" style="font-size: 4em;">Eli Ashment</v-card-title>
+        <v-card-text class="grey--text">Information</v-card-text>
+        <v-card-text class="grey--text">Information</v-card-text>
+        <v-card-text class="grey--text">Information</v-card-text>
+      </v-card>
+        <!-- <material-stats-card
+          color="green"
+          icon="mdi-account"
+          title="Eli Ashment"
+          value="4-5-2019"
+          smallValue="Birthday"
+          sub-icon="mdi-calendar"
+          sub-text="Last 24 Hours"
+        /> -->
+      </v-flex>
+      <v-flex
         md12
         sm12
         lg4
@@ -16,7 +38,7 @@
           color="info"
           type="Line"
         >
-          <h4 class="title font-weight-light">Daily Sales</h4>
+          <h4 class="title font-weight-light">Vitals</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"
@@ -25,7 +47,7 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">55%</span>&nbsp;
-            increase in today's sales
+            increase in heart rate
           </p>
 
           <template slot="actions">
@@ -51,8 +73,8 @@
           color="red"
           type="Bar"
         >
-          <h4 class="title font-weight-light">Email Subscription</h4>
-          <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
+          <h4 class="title font-weight-light">Time Slept</h4>
+          <p class="category d-inline-flex font-weight-light">Minutes Slept Per Month</p>
 
           <template slot="actions">
             <v-icon
@@ -76,8 +98,14 @@
           color="green"
           type="Line"
         >
-          <h3 class="title font-weight-light">Completed Tasks</h3>
-          <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
+          <h3 class="title font-weight-light">Oxygen</h3>
+          <p class="category d-inline-flex font-weight-light">
+            <v-icon
+              color="red"
+              small
+            >
+              mdi-arrow-down
+            </v-icon><span class="red--text">15%</span>&nbsp;decrease in Oxygen</p>
 
           <template slot="actions">
             <v-icon
@@ -86,7 +114,7 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
+            <span class="caption grey--text font-weight-light">updated 26 minutes ago</span>
           </template>
         </material-chart-card>
       </v-flex>
@@ -99,8 +127,8 @@
         <material-stats-card
           color="green"
           icon="mdi-store"
-          title="Revenue"
-          value="$34,245"
+          title="Created"
+          value="5-19-2019"
           sub-icon="mdi-calendar"
           sub-text="Last 24 Hours"
         />
@@ -113,13 +141,13 @@
       >
         <material-stats-card
           color="orange"
-          icon="mdi-content-copy"
-          title="Used Space"
-          value="49/50"
-          small-value="GB"
+          icon="mdi-email"
+          title="Email"
+          value="email"
+          small-value="@email.com"
           sub-icon="mdi-alert"
           sub-icon-color="error"
-          sub-text="Get More Space..."
+          sub-text="Not Verified"
           sub-text-color="text-primary"
         />
       </v-flex>
@@ -131,11 +159,11 @@
       >
         <material-stats-card
           color="red"
-          icon="mdi-information-outline"
-          title="Fixed Issues"
-          value="75"
+          icon="mdi-bluetooth-connect"
+          title="Bluetooth"
+          value="Connected"
           sub-icon="mdi-tag"
-          sub-text="Tracked from Github"
+          sub-text="Connected 25 minutes ago"
         />
       </v-flex>
       <v-flex
@@ -146,12 +174,12 @@
       >
         <material-stats-card
           color="info"
-          icon="mdi-twitter"
-          title="Followers"
-          value="+245"
-          sub-icon="mdi-update"
-          sub-text="Just Updated"
-        />
+          icon="mdi-update"
+          title="Software Update"
+          value="Needs Update"
+          sub-icon="mdi-alert"
+          sub-text="Last Updated 2-4-2018"
+        /><v-btn color="danger" class="justify-center">Click to Update</v-btn>
       </v-flex>
       <v-flex
         md12
@@ -159,8 +187,8 @@
       >
         <material-card
           color="orange"
-          title="Employee Stats"
-          text="New employees on 15th September, 2016"
+          title="Baby"
+          text="Baby Information"
         >
           <v-data-table
             :headers="headers"
@@ -207,7 +235,7 @@
               <span
                 class="subheading font-weight-light mr-3"
                 style="align-self: center"
-              >Tasks:</span>
+              >Pending Tasks:</span>
               <v-tab class="mr-3">
                 <v-icon class="mr-2">mdi-bug</v-icon>
                 Bugs
@@ -450,7 +478,7 @@ export default {
         },
         {
           sortable: false,
-          text: 'Salary',
+          text: 'Cost',
           value: 'salary',
           align: 'right'
         },
